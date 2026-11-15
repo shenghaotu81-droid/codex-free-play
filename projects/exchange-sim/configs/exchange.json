@@ -1,0 +1,94 @@
+{
+  "duration_s": 60,
+  "dt_s": 0.03333333333333333,
+  "seed": 7,
+  "target": {
+    "mode": "random",
+    "speed_mps": 0.5,
+    "half_travel_m": 0.5,
+    "opening_width_m": 0.16,
+    "opening_depth_m": 0.14,
+    "marker_top_m": 0.168
+  },
+  "camera": {
+    "width": 960,
+    "height": 720,
+    "focal_px": 900,
+    "height_m": 0.18,
+    "offset_x_m": 0,
+    "offset_y_m": 0,
+    "pitch_rad": 0,
+    "yaw_rad": 0,
+    "roll_rad": 0,
+    "distortion": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "brightness": 255,
+    "noise_sigma": 1,
+    "blur_px": 1,
+    "dropout_probability": 0,
+    "occlusion_period_s": 0,
+    "occlusion_duration_s": 0.3,
+    "latency_s": 0.04
+  },
+  "chassis": {
+    "initial_x_m": 0,
+    "initial_y_m": -0.55,
+    "initial_yaw_rad": 0,
+    "max_speed_mps": 0.9,
+    "max_yaw_rate": 1,
+    "max_accel_mps2": 3,
+    "response_s": 0.08,
+    "slip_scale": 1,
+    "max_yaw_accel": 6
+  },
+  "arm": {
+    "inventory": [
+      4,
+      4,
+      4
+    ],
+    "storage_xy_m": [
+      [
+        -0.13,
+        -0.06
+      ],
+      [
+        0,
+        -0.15
+      ],
+      [
+        0.13,
+        -0.06
+      ]
+    ],
+    "pick_s": 0.9,
+    "lift_s": 0.7,
+    "return_s": 0.5,
+    "grasp_failure_probability": 0.03,
+    "release_delay_s": 0.12,
+    "emitter_x_m": 0,
+    "emitter_forward_m": 0.55,
+    "drop_height_m": 0.08,
+    "ore_radius_m": 0.021,
+    "scatter_sigma_m": 0.003
+  },
+  "link": {
+    "latency_s": 0.02,
+    "loss_probability": 0,
+    "watchdog_s": 0.1
+  },
+  "algorithm": {
+    "kp": 3,
+    "feedforward": true,
+    "predict_release": true,
+    "release_margin_m": 0.012,
+    "stable_frames": 3,
+    "lost_timeout_s": 0.2
+  },
+  "physics_dt_s": 0.001
+}

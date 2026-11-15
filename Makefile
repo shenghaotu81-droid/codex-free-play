@@ -1,4 +1,10 @@
-.PHONY: demo test build ferry-test
+.PHONY: demo test build ferry-test sim sim-demo
+
+sim:
+	python3 run.py exchange
+
+sim-demo:
+	python3 run.py exchange --headless --video
 
 demo:
 	python3 run.py ferry demo

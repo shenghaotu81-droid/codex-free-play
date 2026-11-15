@@ -1,0 +1,7 @@
+{
+  "target": {"mode": "uniform"},
+  "camera": {"latency_s": 0.12, "occlusion_period_s": 4, "occlusion_duration_s": 0.4},
+  "arm": {"release_delay_s": 0.25},
+  "chassis": {"response_s": 0.12},
+  "link": {"latency_s": 0.04, "loss_probability": 0.05}
+}
