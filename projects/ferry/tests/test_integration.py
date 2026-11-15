@@ -18,7 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class IntegrationTests(unittest.TestCase):
     def setUp(self):
-        self.temporary = tempfile.TemporaryDirectory(prefix=".ferry-test-", dir=ROOT)
+        local = ROOT / ".local" / "tests"
+        local.mkdir(parents=True, exist_ok=True)
+        self.temporary = tempfile.TemporaryDirectory(prefix="integration-", dir=local)
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
 

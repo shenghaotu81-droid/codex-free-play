@@ -1,10 +1,4 @@
 __pycache__/
 *.py[cod]
 .venv/
-.ferry-demo/
-.ferry-demo-*/
-.ferry-test-*/
-captures/
-dist/
 *.egg-info/
-/.research-local/

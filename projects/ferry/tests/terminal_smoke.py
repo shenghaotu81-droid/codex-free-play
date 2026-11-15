@@ -20,7 +20,9 @@ from ferry.archive import Archive
 
 
 def run():
-    with tempfile.TemporaryDirectory(prefix=".ferry-test-terminal-", dir=ROOT) as temporary:
+    local = ROOT / ".local" / "tests"
+    local.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="terminal-", dir=local) as temporary:
         root = Path(temporary) / "archive"
         config = {"seed": "https://demo.invalid/"}
         with Archive(root, config=config) as archive:

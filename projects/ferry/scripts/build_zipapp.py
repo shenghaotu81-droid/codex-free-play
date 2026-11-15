@@ -5,8 +5,8 @@ import tempfile
 import zipapp
 
 ROOT = Path(__file__).resolve().parents[1]
-DEST = ROOT / "dist"
-DEST.mkdir(exist_ok=True)
+DEST = ROOT / ".local" / "dist"
+DEST.mkdir(parents=True, exist_ok=True)
 with tempfile.TemporaryDirectory(prefix=".build-", dir=DEST) as temporary:
     source = Path(temporary)
     shutil.copytree(ROOT / "ferry", source / "ferry", ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))

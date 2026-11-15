@@ -1,0 +1,5 @@
+.local/
+captures/
+dist/
+.ferry-demo*/
+.ferry-test-*/

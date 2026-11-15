@@ -147,7 +147,9 @@ def serialize(rows, format):
 
 def run_demo(interactive=False):
     from .demo import demo_site
-    root = Path(tempfile.mkdtemp(prefix=".ferry-demo-", dir=Path.cwd()))
+    demos = Path.cwd() / ".local" / "demos"
+    demos.mkdir(parents=True, exist_ok=True)
+    root = Path(tempfile.mkdtemp(prefix="demo-", dir=demos))
     output = root / "archive"
     print(banner(), flush=True)
     print("\n  演示：采集本地 HTTP 网站 → 暂停 → 续爬 → 筛选 → 导出 → 校验\n", flush=True)
