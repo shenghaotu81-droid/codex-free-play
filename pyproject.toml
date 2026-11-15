@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ferry-crawl"
+version = "0.1.0"
+description = "A local-first website collector with resumable crawls and searchable archives."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+ferry = "ferry.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ferry*"]
