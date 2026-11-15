@@ -6,7 +6,7 @@
 
 **现在讨论选题，不启动新产品实现。** 用户明确说“不要着急开始做”，希望负责人持续思考、查重、判断和讨论。Ferry 是已经可运行的第一阶段成果，尚未成为双方认可的长期主方向。
 
-最新反馈：“把普通视频变成可修改、重跑的物理小世界”让用户觉得有点无聊。该候选降级，不继续推进。用户同时要求维护仓库记忆，以便换窗口后负责人仍能接续。
+最近的候选反馈：“把普通视频变成可修改、重跑的物理小世界”让用户觉得有点无聊。该候选降级，不继续推进。用户同时要求维护仓库记忆，以便换窗口后负责人仍能接续。最新请求是“我们接着想，发挥你的创造力”，仍在头脑风暴阶段。
 
 ## 用户背景与合作方式
 
@@ -71,6 +71,8 @@
 | 导航反事实实验台 | 负责人提出技术路线；用户认为具体路线仍受局限，并强调宣传与演示。未接受为主方向 |
 | 自动找导航失败场景、缩减反例、生成回归案例 | 负责人用于讨论产品结构的例子，未获具体路线认可；相关 fuzzing、故障缩减工作已存在 |
 | 视频变可修改的物理世界 | 最新候选，用户认为“有点无聊”；不要继续替它辩护或直接实现 |
+| 录音/口技→可编辑、可嵌入游戏的 DSP 发声程序 | 新提出的跨域候选，用户尚未反馈。逆合成与程序式音频已有强相关工作，尚未完成直接同类排除 |
+| 可 fork 的 Demo：从演示的某个检查点接手运行、改变输入 | 新提出的候选，用户尚未反馈。VHS、Scrimba 等已覆盖部分核心体验；仅录屏或互动教学不构成差异 |
 
 经常出现的对话失误：负责人反复缩窄到机器人诊断/仿真；堆技术词替代产品吸引力；过早提出一个新名字并承诺实现；反复让用户从列表中选。后续应给出更有判断的讨论，也允许承认并淘汰候选。
 
@@ -133,12 +135,21 @@ python3 dist/ferry.pyz --help
 - PythonRobotics：https://github.com/AtsushiSakai/PythonRobotics
 - LeRobot：https://github.com/huggingface/lerobot
 - Genesis：https://github.com/Genesis-Embodied-AI/genesis-world
+- 自主空仓库孵化：Autonomous-Forge，https://github.com/OmarH-creator/Autonomous-Forge 。与本仓库起点、代理长期记忆和自主维护叙事非常近，故不将该叙事直接当新产品原创点。
+- 程序化终端演示：VHS，https://github.com/charmbracelet/vhs
+- 可交互编程录屏：Scrimba，https://docs.scrimba.com/explain/scrims
+- 固定合成器参数逆推：INSTRUMENTAL，https://github.com/philippbogdan/instrumental
+- 可微模态声音/逆设计：DiffSound，https://github.com/TechnetiumMan/DiffSound
+- DSP Programming by Example 原论文：https://www.cs.yale.edu/homes/piskac/papers/2018SantolucitoETALdsp-pbe.pdf
+- DDSP-SFX：https://arxiv.org/abs/2309.08060
+
+2026-11-15 后续发散研究：机械轨迹逆设计、影子雕塑、视频恢复声音、触感逆设计等均查到直接相关实现，没有把它们作为已证实原创的候选。详细的新候选与风险见 `docs/IDEAS.md`。本轮未进行新产品实现。
 
 查重原则：检索不到不能证明原创；区分底层库、相关论文与直接同类成品；有相邻工作时说明拟解决的具体差异。此前没有任何新候选完成原创性或可行性验证。
 
 ## 下一轮从哪里接
 
-1. 先承接“视频变物理小世界有点无聊”的反馈，不重推该候选。
+1. 不重推“视频变物理小世界”；最新发散见 `docs/IDEAS.md`，其中两个候选尚无用户反馈，不代表选定。
 2. 继续开放讨论，避免立即编码，也不要再把用户背景当成题材边界。
 3. 优先讨论具体的新体验、实际价值、技术难点和可传播的演示，允许淘汰不够吸引人的想法。
 4. 对新获得的反馈更新本文，保留未决事项，勿把负责人的偏好当作双方已经选定。
