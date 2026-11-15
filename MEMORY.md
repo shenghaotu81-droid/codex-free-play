@@ -225,3 +225,5 @@ python3 .local/dist/ferry.pyz --help
 - 未实现CAD/关节接触碰撞、真实曝光纹理、机械臂自遮挡、Tag/RFID退出、完整比赛裁判和板端性能。默认几何/时延需实测标定；PC耗时不等于MaixCAM时延，显式注入camera.latency_s。
 
 后续先读项目 README 与验证记录，用已存在入口实际运行；重点让用户换算法、用真实资料校准，不应重新从讨论/可行性阶段开始。所有临时资料/生成物继续写各项目.local，外部仓库和Windows资料始终只读。
+
+Git 交付：实现提交 `6a284bd` 已推送 `feat/exchange-sim`，并快进合并、推送到 `main`；当前工作分支是 `main`。根目录随后出现编辑器自动生成的 `.vscode/settings.json`（CMake 源路径、含本机绝对路径），内容保留未修改，按个人编辑器配置加入忽略规则，不作为项目产物移动或发布。
